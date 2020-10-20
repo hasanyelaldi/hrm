@@ -1,9 +1,9 @@
 version: '3.1'
 services:
-  rabbitmq:
-    image: elasticsearch
+  elasticsearch:
+    image: library/elasticsearch:7.9.2
     ports:
       - '9200:9200'
       - '9300:9300'
     environment:
-      - discovery.type=sigle-node
+      - discovery.type=single-node
