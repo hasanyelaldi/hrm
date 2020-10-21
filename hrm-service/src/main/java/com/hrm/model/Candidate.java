@@ -1,6 +1,7 @@
 package com.hrm.model;
 
 import java.util.Date;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -13,6 +14,7 @@ public class Candidate {
     private String surname;
     private Date createdTime;
     private Date updatedTime;
+    private ObjectId cv;
 
     public Candidate() {
     }
@@ -51,5 +53,13 @@ public class Candidate {
     }
     public void setUpdatedTime(Date updatedTime) {
         this.updatedTime = updatedTime;
+    }
+
+    public ObjectId getCv() {
+        return cv;
+    }
+
+    public void setCv(ObjectId cv) {
+        this.cv = cv;
     }
 }
