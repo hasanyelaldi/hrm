@@ -1,0 +1,8 @@
+#Docker build
+docker build -t hrm-service:v1 .
+
+#Docker run
+docker run -d -p 8080:8080 -t hrm-service:v1
+
+#Check container id
+docker ps -a
